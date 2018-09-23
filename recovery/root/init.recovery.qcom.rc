@@ -46,6 +46,7 @@ on fs
 
     wait /dev/block/platform/${ro.boot.bootdevice}
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
+    symlink /dev/block/bootdevice/by-name/oem /dev/block/bootdevice/by-name/vendor
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
